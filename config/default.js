@@ -1,14 +1,14 @@
 const config = {
   // 启动端口
-  port: 3000,
+  port: 1314,
   // 数据库配置
   database: {
     DATABASE: 'nodesql',
     USERNAME: 'root',
-    PASSWORD: '123456',
+    PASSWORD: '12345678',
     PORT: '3306',
-    HOST: 'localhost'
-  }
-}
+    HOST: 'localhost',
+  },
+};
 
-module.exports = config
+module.exports = config;

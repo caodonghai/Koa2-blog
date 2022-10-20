@@ -54,6 +54,20 @@ app.use(require('./routers/posts.js').routes())
 app.use(require('./routers/signout.js').routes())
 
 
-app.listen(config.port)
+app.listen(config.port, () => {
+  console.log(`koa 服务已启动：http://localhost:${config.port}`);
+  console.log(`koa 服务已启动：http://127.0.1:${config.port}`);
+  // axios 用于自动触发任务
+  // axios("http://localhost:3333/")
+  //   .then((res) => {
+  //     console.log("服务端返回的内容：", res.data);
+  //   })
+  //   .catch((res) => {
+  //     // catch 方法在这里是很有必要的，
+  //     // 因为 node 程序如果有报错可能整个程序都会挂掉
+  //     // 及时catch 住错误，不要影响主进程的运行
+  //     console.log("服务端报错~", res.message);
+  //   });
+});
 
 console.log(`listening on port ${config.port}`)
