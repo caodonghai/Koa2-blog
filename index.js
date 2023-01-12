@@ -5,7 +5,7 @@ const config = require("./config/default.js");
 const { init: initDB } = require("./db");
 
 // middleWares
-const middleWares = require("./middleware/index");
+const middleWares = require("./middlewares/index");
 
 // routers
 const routers = require("./routers/index");
