@@ -8,6 +8,9 @@ module.exports = () => {
     if (isNoNeedCheckLogin(url)) {
       return await next();
     }
+    if (url.startsWith("/test")) {
+      return await next();
+    }
     const userName = header["x-user-name"];
     const openId = header["x-open-id"];
     if (!userName) {
